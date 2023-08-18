@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>موقع الدفع الاكترونى </h1>
+        <section class="ui">
+            <div class="container-left">
+                <form id="credit-card">
+                    <div class="number-container">
+                        <select name="ctl00$ContentPlaceHolder1$CatDropDown" id="ContentPlaceHolder1_CatDropDown" class="form-control">
+                            <option value="0">--أختر الكليه--</option>
+                            <option value="1">كلية التربية</option>
+                            <option value="2">كلية التكنولوجيا والتعليم</option>
+                            <option value="3">كلية التمريض</option>
+                            <option value="4">كلية الصيدله</option>
+                            <option value="5">كلية التربية الرياضية</option>
+                            <option value="7">كلية الحقوق</option>
+                            <option value="8">كلية الطب</option>
+                            <option value="9">كلية الطب البيطرى</option>
+                            <option value="10">كلية العلوم</option>
+                            <option value="11">كلية الآداب</option>
+                            <option value="12">كلية التجارة</option>
+                            <option value="358">كلية التربية للطفولة المبكرة</option>
+                            <option value="431">كلية الهندسة</option>
+                            <option value="579">كلية السياسة والاقتصاد</option>
+                            <option value="588">كلية الاعلام</option>
+                            <option value="590">كلية الحاسبات والذكاء الاصطناعى</option>
+                            <option value="591">كلية طب الاسنان</option>
+                            <option value="592">كلية العلاج الطبيعى</option>
+                            <option value="593">كلية الدراسات العليا للعلوم المتقدمة</option>
+                            <option value="603">كلية الزراعة</option>
+                            <option value="604">كلية تكنولوجيا العلوم الصحية التطبيقية</option>
+                            <option value="605">كلية الفنون التطبيقية</option>
+                            <option value="607">كلية الخدمة الاجتماعية التنموية</option>
+                            <option value="609">كلية الالسن</option>
+                            <option value="610">كلية السياحة والفنادق</option>
+                            <option value="612">كلية علوم الارض</option>
+                            <option value="613">كلية علوم ذوى الاحتياجات الخاصة</option>
+                            <option value="625">معهد فنى تمريض</option>
+                            <option value="633">معهد ابحاث وتطبيقات الليزر</option>
+                            <option value="654">كليات التعليم المفتوح بالجامعة</option>
+                            <option value="656">المعهد القومى لعلوم المسنين</option>
+                            <option value="681">كلية علوم الملاحة و تكنولوجيا الفضاء</option>
+                            <option value="684">معهد دراسات المشروعات الصغيرة والمتوسطة</option>
+                            <option value="706">معهد ابحاث النباتات الطبية والعطرية</option>
+                    
+                        </select> <br>
+                        <input type="text" name="card-number" id="card" maxlength="14" placeholder="الرقم القومى باللغه الانجليزيه"
+                        required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div class="number-container">
+                        <label>Card Number</label>
+                        <input type="text" name="card-number" id="card-number" maxlength="18" minlength="16" placeholder="**** **** **** **** "
+                        required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    </div>
+                    <div class="name-container">
+                        <label>Holder</label>
+                        <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="Name in Card"
+                        required
+                        onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+                    </div>
+                    <div class="infos-container">
+                        <div class="expiration-container">
+                            <label>MM/YY </label>
+                            <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5" minlength="4"  placeholder="02/40"
+                            required
+                            
+                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                        <div class="cvv-container">
+                            <label>CVV</label>
+                            <input type="text" name="cvv-text" id="cvv-text" maxlength="3"  minlength="3"  placeholder="123"
+                            required
+                            onkeypress="return event.charCode >=48 && event.charCode <= 57">
+                        </div>
+                    </div>
+                    <input type="submit" value="Send" id="add">
+                </form>
+            </div>
+            <div class="container-right">
+                <div class="card">
+                    <div class="intern">
+                        <img class="approximation" src="img/aprox.png" alt="aproximation">
+                        <div class="card-number">
+                            <div class="number-vl">1234 5678 9101 1121</div>
+                        </div>
+                        <div class="card-holder">
+                            <label>Holder</label>
+                            <div class="name-vl">Card's Name</div>
+                        </div>
+                        <div class="card-infos">
+                            <div class="exp">
+                                <label>MM / DD</label>
+                                <div class="expiration-vl">00/00</div>
+                            </div>
+                            <div class="cvv">
+                                <label>CVV</label>
+                                <div class="cvv-vl">123</div>
+                            </div>
+                        </div>
+                        <img class="chip" src="img/chip.png" alt="chip">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <h3>جميع الحقوق محفوظه@2024</h3>
+    <script src="script.js"></script>
+</body>
+</html>
